@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import EventTypesChart from './components/EventTypesChart';
+import SeverityChart from './components/SeverityChart';
+import SourceIPChart from './components/SourceIPChart';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-gray-900 text-white min-h-screen p-4">
+      <h1 className="text-center text-4xl mb-4">Network Security Dashboard</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <EventTypesChart />
+        <SeverityChart />
+        <SourceIPChart />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
